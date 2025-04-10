@@ -1,5 +1,9 @@
+// pages/projects.tsx
+'use client'; // This is a client component
+import { useRouter } from 'next/navigation'; // Importing useRouter
 import Link from 'next/link';
 import Image from 'next/image'; // Importing next/image for optimized images
+import BackButton from "../components/button"; // Importing the back button component
 
 const ProjectCard = ({ title, description, image, link }: { title: string, description: string, image: string, link: string }) => {
   return (
@@ -23,6 +27,8 @@ const ProjectCard = ({ title, description, image, link }: { title: string, descr
 };
 
 export default function ProjectsPage() {
+  const router = useRouter(); // Initialize the router
+
   const projects = [
     {
       title: 'Project 1',
@@ -53,6 +59,7 @@ export default function ProjectsPage() {
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-3xl font-bold text-center mb-8">My Projects</h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {projects.map((project, index) => (
           <ProjectCard
@@ -63,6 +70,11 @@ export default function ProjectsPage() {
             link={project.link}
           />
         ))}
+      </div>
+
+      {/* Back Button at the Bottom */}
+      <div className="mt-6 flex justify-center">
+        <BackButton onClick={() => router.push('/')} />
       </div>
     </div>
   );

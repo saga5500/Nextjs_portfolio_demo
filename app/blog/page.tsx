@@ -1,13 +1,20 @@
 // pages/blog/blogpost.tsx
-
+'use client'; // This is a client component
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
+import BackButton from 'app/components/button'; // Correct import with uppercase 'B'
+
+// Function to handle back navigation
+
 
 const BlogPost = () => {
+  const router = useRouter();
+
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-4xl font-bold mb-8 text-center text-blue-700">Blog Posts</h1>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {/* Card 1 */}
         <div className="bg-white shadow-lg rounded-lg p-6">
@@ -29,6 +36,12 @@ const BlogPost = () => {
           <Link href="/blog/second" className="text-blue-500 hover:text-blue-700">
             Read More
           </Link>
+        </div>
+
+        {/* Back Button */}
+        <div>
+        <BackButton onClick={() => router.push('/')} />
+
         </div>
       </div>
     </div>

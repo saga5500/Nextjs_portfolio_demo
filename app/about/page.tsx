@@ -1,5 +1,11 @@
-// pages/about.js
+// pages/about.tsx
+'use client'; // This is a client component
+import { useRouter } from 'next/navigation'; // Importing useRouter
+import BackButton from "../components/button"; // Importing the back button component
+
 export default function About() {
+  const router = useRouter(); // Initialize the router
+
   return (
     <div className="bg-gradient-to-r from-blue-500 to-indigo-600 min-h-screen flex items-center justify-center py-12 px-2 sm:px-2 lg:px-4">
       <div className="max-w-8xl bg-white p-8 rounded-3xl shadow-2xl hover:shadow-2xl transition-shadow duration-300">
@@ -31,6 +37,11 @@ export default function About() {
           <p className="text-lg text-gray-700">
             You can reach me via email at <a href="mailto:sagar@example.com" className="text-blue-600 hover:text-blue-800 transition duration-200">sagar@example.com</a> or connect with me on LinkedIn at <a href="https://www.linkedin.com/in/sagarbishta/" className="text-blue-600 hover:text-blue-800 transition duration-200">sagarbista.com</a>.
           </p>
+        </div>
+
+        {/* Back Button */}
+        <div className="mt-6 flex justify-center">
+          <BackButton onClick={() => router.push('/')} />
         </div>
       </div>
     </div>
