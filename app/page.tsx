@@ -7,7 +7,7 @@ import Blogcards from 'app/components/Blogcards';
 
 // Metadata writing 
 export const metadata = {
-  title: 'my portfolio',
+  title: 'Sagar Portfolio',
   description: 'sagar portfolio in next js'
 }
 

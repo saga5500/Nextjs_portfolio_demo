@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Company Logo & Description */}
           <div className="text-center md:text-left">
-            <h1 className="text-3xl font-semibold text-blue-400">Sagar Bista</h1>
+            <h1 className="text-3xl font-semibold text-blue-400">Sagar Web Developer</h1>
             <p className="mt-2 text-sm text-gray-400">
               We strive to provide excellent services with innovative solutions.
             </p>
