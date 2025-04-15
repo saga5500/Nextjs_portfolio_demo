@@ -5,8 +5,9 @@ import Iconexample from './Iconeexample'; // My new Icon
 import SlideShow from './components/cards';
 import Blogcards from 'app/components/Blogcards';
 import Accordin from './components/Accordin';
-import FullPage from './components/FullpageImage';
+
 import FullPageImage from './components/Fullpage';
+import ReviewCard from './components/ReviewCard';
 // Metadata writing 
 export const metadata = {
   title: 'Sagar Portfolio',
@@ -53,6 +54,7 @@ export default function Page() {
         </div>
         <Blogcards/>
         <FullPageImage/>
+        <ReviewCard/>
         <Accordin/>
       </main>
     </div>
